@@ -96,7 +96,7 @@ appServlet = DispatcherServlet ====> / , web에서 모든 요청처리를 Dispat
 
 과거 시대에는 웹의 Response응답 시 Servlet으로 Front-End와 Back-End를 동시에 구현시켰다. 하지만 시스템이 복잡해지고 표현해야 하는 웹 컨텐츠가 많아질 수록 코드가 길어져 가독성이 안좋아지며 보수가 힘들게 된다. 이를 해결하기 위해 JSP(Java Server Page)을 도입하여 시각적 부문을 처리하는 Front-End와 응용 서비스 부문을 처리하는 Back-End로 나눠지게 되었다.
 
-![img](D:\BackEnd\213016405459E2CF3A)
+![img](D:\BackEnd\image\213016405459E2CF3A)
 
 <기본적 동작 이론>
 
@@ -123,21 +123,21 @@ https://songsunbi.tistory.com/9
 * 클래스 안의 메소드 실행 -> 
 * view 페이지 이름 리턴  
   * *view페이지 이름 리턴시, 다시한번 servlet-context.xml에서 처리.*
-  * ![img](D:\BackEnd\99584F355B5AA9DD16)
+  * ![img](D:\BackEnd\image\99584F355B5AA9DD16)
 
 (MVC 패턴, 모델 2, Front-Controller 구조.)
 
-web.xml에서 url에 따른 Servlet-context호출을 분리시킨다.
+web.xml에서 url에 따른 호출되는 Servlet-context 분리시킨다.
 
 **URL /test1일때 동작 루트를 servlet-context.xml로 설정**
 
-* ![img](D:\BackEnd\99816A375B4450C107)
+* ![img](D:\BackEnd\image\99816A375B4450C107)
 
 **URL /test2일때 동작 루트를 servlet-context2.xml로 설정**
 
-* ![img](D:\BackEnd\99A8BB345B4450C12E)
+* ![img](D:\BackEnd\image\99A8BB345B4450C12E)
 
-* ![img](D:\BackEnd\995630335B4450BF30)
+* ![img](D:\BackEnd\image\995630335B4450BF30)
 
 **현재 appServlet 폴더에 2개의 다른 Servlet-context가 분리되어 존재.**
 
@@ -145,15 +145,15 @@ web.xml에서 url에 따른 Servlet-context호출을 분리시킨다.
 
 * **servlet-context.xml**
 
-![img](D:\BackEnd\9946DA345B4450C20A)
+![img](D:\BackEnd\image\9946DA345B4450C20A)
 
 * **servlet-context2.xml**
 
-![img](D:\BackEnd\997BEE3F5B4450C20C)
+![img](D:\BackEnd\image\997BEE3F5B4450C20C)
 
 
 
-![img](D:\BackEnd\99CE6F455B5A891B26)
+![img](D:\BackEnd\image\99CE6F455B5A891B26)
 
 Servlet-context에는 base-package, 사용자가 설정한 패키지안의 자바파일을 스캔해서 @Controller라는 Annotation을 가진 파일을 Controller로 사용.
 
